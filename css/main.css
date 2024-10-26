@@ -3,19 +3,34 @@
 /* Set custom variables here */
 
 
-
-
+:root,
+[data-bs-theme=light] {
+  --bs-body-bg: #F6F3ED;
+  --bs-primary-rgb: 46, 72, 58;
+  --bs-primary: #2e483a;
+  --bs-body-bg: #f6f3ed;
+}
 
 .navbar-brand {
   color: #F6F3ED;
 }
 
 body {
+  background-color: var(--bs-body-bg);
   font-family: "Sarala", sans-serif;
 }
 
-h1, h2, h3 {
-  font-family: "Merriweather", serif;
+
+h1,
+h2,
+h3 {
+  font-family: "Merriweather", serif, text;
+  text-decoration: none;
+}
+
+.list-group-item {
+  background-color: var(--bs-primary-rgb);
+  padding: 0;
 }
 
 #hero {
@@ -42,12 +57,12 @@ h1, h2, h3 {
   height: 400px;
 }
 
-section:not(#hero):not(#cta){
+section:not(#hero):not(#cta) {
   padding: 60px 0;
 }
 
-@media(min-width: 993px){
-  section:not(#hero):not(#cta){
+@media(min-width: 993px) {
+  section:not(#hero):not(#cta) {
     padding: 100px 0;
   }
 }
